@@ -9,7 +9,11 @@ BASE_DIR = PACKAGE_ROOT
 DEBUG = bool(int(os.environ.get("DEBUG", "1")))
 
 DATABASES = {
-    "default": dj_database_url.config(default="postgres://localhost/pinaxcon")
+    #"default": dj_database_url.config(default="postgres://localhost/pinaxcon")
+    "default": {
+       "ENGINE": 'django.db.backends.sqlite3',
+       "NAME": "foss4g.sqlite"
+    }
 }
 
 ALLOWED_HOSTS = [
@@ -114,10 +118,10 @@ MIDDLEWARE_CLASSES = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "pinaxcon.urls"
+ROOT_URLCONF = "foss4g.urls"
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = "pinaxcon.wsgi.application"
+WSGI_APPLICATION = "foss4g.wsgi.application"
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -154,8 +158,8 @@ INSTALLED_APPS = [
     "symposion.teams",
 
     # project
-    "pinaxcon",
-    "pinaxcon.proposals"
+    "foss4g",
+    "foss4g.proposals"
 ]
 
 # A sample logging configuration. The only tangible logging
@@ -208,7 +212,7 @@ AUTHENTICATION_BACKENDS = [
 
 CONFERENCE_ID = 1
 PROPOSAL_FORMS = {
-    "talk": "pinaxcon.proposals.forms.TalkProposalForm",
+    "talk": "foss4g.proposals.forms.TalkProposalForm",
 }
-PINAX_PAGES_HOOKSET = "pinaxcon.hooks.PinaxPagesHookSet"
-PINAX_BOXES_HOOKSET = "pinaxcon.hooks.PinaxBoxesHookSet"
+PINAX_PAGES_HOOKSET = "foss4g.hooks.PinaxPagesHookSet"
+PINAX_BOXES_HOOKSET = "foss4g.hooks.PinaxBoxesHookSet"

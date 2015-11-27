@@ -7,4 +7,4 @@ comprehensive account management functionality. It is a foundation
 suitable for most sites that have user accounts.
 """
 
-default_app_config = "pinaxcon.apps.AppConfig"
+default_app_config = "foss4g.apps.AppConfig"

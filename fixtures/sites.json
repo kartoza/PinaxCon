@@ -4,15 +4,7 @@
         "model": "sites.site",
         "fields": {
             "domain": "localhost:8000",
-            "name": "PinaxCon"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "sites.site",
-        "fields": {
-            "domain": "conference.pinaxproject.com",
-            "name": "PinaxCon"
+            "name": "FOSS4G"
         }
     }
 ]

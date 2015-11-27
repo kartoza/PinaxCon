@@ -2,7 +2,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var path = require("path");
 var webpack = require("webpack");
-var projectTemplatesRoot = "../../pinaxcon/templates/";
+var projectTemplatesRoot = "../../foss4g/templates/";
 
 module.exports = {
     context: path.resolve(__dirname, "src"),
