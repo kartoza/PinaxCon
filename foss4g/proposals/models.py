@@ -8,6 +8,13 @@ class Proposal(ProposalBase):
     class Meta:
         abstract = True
 
+Proposal._meta.get_field('abstract').verbose_name = 'Abstract'
+# TODO vmx 2015-12-13: Add maximum number of words
+Proposal._meta.get_field('abstract').help_text = (
+    "Will be made public if your proposal is accepted. Edit using "
+    "<a href='http://daringfireball.net/projects/markdown/basics' "
+    "target='_blank'>Markdown</a>.")
+
 
 class TalkProposal(Proposal):
 
