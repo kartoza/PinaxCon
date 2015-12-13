@@ -1,7 +1,7 @@
 from django import forms
 from django.utils.safestring import mark_safe
 
-from .models import TalkProposal
+from .models import TalkProposal, WorkshopProposal
 
 
 class ProposalForm(forms.ModelForm):
@@ -50,3 +50,16 @@ class TalkProposalForm(ProposalForm):
           'foss_contributing_links': forms.Textarea(attrs={'rows': 5}),
           'foss_using_links': forms.Textarea(attrs={'rows': 5}),
         }
+
+
+class WorkshopProposalForm(ProposalForm):
+
+    class Meta:
+        model = WorkshopProposal
+        fields = [
+            "title",
+            "description",
+            "abstract",
+            "additional_notes",
+            "recording_release",
+        ]

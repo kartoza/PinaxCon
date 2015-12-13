@@ -213,6 +213,7 @@ AUTHENTICATION_BACKENDS = [
 CONFERENCE_ID = 1
 PROPOSAL_FORMS = {
     "talk": "foss4g.proposals.forms.TalkProposalForm",
+    "workshop": "foss4g.proposals.forms.WorkshopProposalForm",
 }
 PINAX_PAGES_HOOKSET = "foss4g.hooks.PinaxPagesHookSet"
 PINAX_BOXES_HOOKSET = "foss4g.hooks.PinaxBoxesHookSet"
