@@ -61,5 +61,4 @@ class WorkshopProposalForm(ProposalForm):
             "description",
             "abstract",
             "additional_notes",
-            "recording_release",
         ]
