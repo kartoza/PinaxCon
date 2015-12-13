@@ -22,12 +22,7 @@
                     <a href="{% url "speaker_edit" %}" class="btn btn-xs btn-default">
                         <i class="fa fa-pencil"></i> Edit your speaker profile
                     </a>
-                    <!-- NOTE vmx 2015-11-27: Don't hard-code it to `talk`,
-                         but make it more flexible. If there's a single kind,
-                         link to that, if there is more than one kind, link
-                         to the overview page `{% url "proposal_submit" %}`.
-                      -->
-                    <a href="{% url "proposal_submit_kind" "talk" %}" class="btn btn-xs btn-default">
+                    <a href="{% url "proposal_submit" %}" class="btn btn-xs btn-default">
                         <i class="fa fa-plus-sign"></i> Submit a new proposal
                     </a>
                 {% endif %}
