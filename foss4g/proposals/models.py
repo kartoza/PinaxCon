@@ -16,5 +16,30 @@ class Proposal(ProposalBase):
 
 class TalkProposal(Proposal):
 
+    foss_is = models.BooleanField(
+        default=False,
+    )
+    foss_is_links = models.TextField(
+        verbose_name="Link to project",
+        help_text="Please add a link to the source code of your open source project",
+        blank=True
+    )
+    foss_contributing = models.BooleanField(
+        default=False,
+    )
+    foss_contributing_links = models.TextField(
+        verbose_name="Link to contributions",
+        help_text="Please add links some of the contributions you've made",
+        blank=True
+    )
+    foss_using = models.BooleanField(
+        default=False,
+    )
+    foss_using_links = models.TextField(
+        verbose_name="Link to projects",
+        help_text="Please add links some of the projects you use",
+        blank=True
+    )
+
     class Meta:
         verbose_name = "talk proposal"
