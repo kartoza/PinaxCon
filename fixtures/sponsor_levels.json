@@ -1,35 +1,35 @@
 [
-    {
-        "pk": 1,
-        "model": "symposion_sponsorship.sponsorlevel",
-        "fields": {
-            "conference": 1,
-            "description": "",
-            "cost": 10000,
-            "name": "Gold",
-            "order": 0
-        }
+{
+    "fields": {
+        "conference": 2,
+        "description": "",
+        "cost": 1500,
+        "name": "Supporter",
+        "order": 5
     },
-    {
-        "pk": 2,
-        "model": "symposion_sponsorship.sponsorlevel",
-        "fields": {
-            "conference": 1,
-            "description": "",
-            "cost": 5000,
-            "name": "Silver",
-            "order": 1
-        }
+    "model": "symposion_sponsorship.sponsorlevel",
+    "pk": 4
+},
+{
+    "fields": {
+        "conference": 2,
+        "description": "",
+        "cost": 7500,
+        "name": "Silver",
+        "order": 3
     },
-    {
-        "pk": 3,
-        "model": "symposion_sponsorship.sponsorlevel",
-        "fields": {
-            "conference": 1,
-            "description": "",
-            "cost": 2000,
-            "name": "Bronze",
-            "order": 2
-        }
-    }
+    "model": "symposion_sponsorship.sponsorlevel",
+    "pk": 5
+},
+{
+    "fields": {
+        "conference": 2,
+        "description": "",
+        "cost": 3750,
+        "name": "Bronze",
+        "order": 4
+    },
+    "model": "symposion_sponsorship.sponsorlevel",
+    "pk": 6
+}
 ]

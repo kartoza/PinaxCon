@@ -1,23 +1,34 @@
 [
-    {
-        "pk": 1,
-        "model": "symposion_conference.conference",
-        "fields": {
-            "timezone": "US/Eastern",
-            "start_date": "2040-01-01",
-            "end_date": "2040-01-04",
-            "title": "PinaxCon"
-        }
+{
+    "fields": {
+        "timezone": "Europe/Berlin",
+        "start_date": "2016-08-22",
+        "end_date": "2016-08-26",
+        "title": "FOSS4G 2016"
     },
-    {
-        "pk": 1,
-        "model": "symposion_conference.section",
-        "fields": {
-            "conference": 1,
-            "start_date": "2040-01-01",
-            "name": "General Sessions",
-            "end_date": "2040-01-01",
-            "slug": "general-sessions"
-        }
-    }
+    "model": "symposion_conference.conference",
+    "pk": 2
+},
+{
+    "fields": {
+        "conference": 2,
+        "start_date": "2016-08-24",
+        "name": "General Track",
+        "end_date": "2016-08-26",
+        "slug": "general-track"
+    },
+    "model": "symposion_conference.section",
+    "pk": 2
+},
+{
+    "fields": {
+        "conference": 2,
+        "start_date": "2016-08-22",
+        "name": "Workshops",
+        "end_date": "2016-08-23",
+        "slug": "workshops"
+    },
+    "model": "symposion_conference.section",
+    "pk": 3
+}
 ]

@@ -210,7 +210,7 @@ AUTHENTICATION_BACKENDS = [
     "account.auth_backends.UsernameAuthenticationBackend",
 ]
 
-CONFERENCE_ID = 1
+CONFERENCE_ID = 2
 PROPOSAL_FORMS = {
     "talk": "foss4g.proposals.forms.TalkProposalForm",
     "workshop": "foss4g.proposals.forms.WorkshopProposalForm",

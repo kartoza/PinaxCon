@@ -1,22 +1,42 @@
 [
-    {
-        "pk": 1,
-        "model": "symposion_proposals.proposalsection",
-        "fields": {
-            "start": null,
-            "section": 1,
-            "end": null,
-            "closed": null,
-            "published": null
-        }
+{
+    "fields": {
+        "start": "2015-12-16T00:00:00Z",
+        "section": 2,
+        "end": "2016-03-22T00:00:00Z",
+        "closed": false,
+        "published": false
     },
-    {
-        "pk": 1,
-        "model": "symposion_proposals.proposalkind",
-        "fields": {
-            "section": 1,
-            "name": "talk",
-            "slug": "talk"
-        }
-    }
+    "model": "symposion_proposals.proposalsection",
+    "pk": 2
+},
+{
+    "fields": {
+        "start": "2015-12-16T00:00:00Z",
+        "section": 3,
+        "end": "2016-03-25T00:00:00Z",
+        "closed": false,
+        "published": false
+    },
+    "model": "symposion_proposals.proposalsection",
+    "pk": 3
+},
+{
+    "fields": {
+        "section": 2,
+        "name": "Talk",
+        "slug": "talk"
+    },
+    "model": "symposion_proposals.proposalkind",
+    "pk": 2
+},
+{
+    "fields": {
+        "section": 3,
+        "name": "Workshop",
+        "slug": "workshop"
+    },
+    "model": "symposion_proposals.proposalkind",
+    "pk": 3
+}
 ]
