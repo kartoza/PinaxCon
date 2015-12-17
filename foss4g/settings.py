@@ -12,7 +12,7 @@ DATABASES = {
     #"default": dj_database_url.config(default="postgres://localhost/pinaxcon")
     "default": {
        "ENGINE": 'django.db.backends.sqlite3',
-       "NAME": "foss4g.sqlite"
+       "NAME": os.path.join(PROJECT_ROOT, 'foss4g.sqlite')
     }
 }
 
