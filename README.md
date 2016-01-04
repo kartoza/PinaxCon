@@ -100,7 +100,7 @@ Create a new vhost file called `/etc/apache2/sites-available/001-proposals.conf`
     ErrorLog /opt/proposals/logs/error.log
     CustomLog /opt/proposals/logs/access.log combined
 
-    WSGIDaemonProcess proposals.2016.foss4g.org
+    WSGIDaemonProcess proposals.2016.foss4g.org maximum-requests=1000
     WSGIProcessGroup proposals.2016.foss4g.org
 
     WSGIScriptAlias / /opt/proposals/html/index.wsgi
