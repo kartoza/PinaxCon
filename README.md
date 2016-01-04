@@ -18,12 +18,23 @@ The server needs at least git, python-dev and python-virtualenv installed (proba
 
 ### Installing the Django application
 
+Create directories and install dependencies:
+
     cd /opt/proposals
     git clone https://github.com/vmx/PinaxCon.git foss4g
     virtualenv env_foss4g
     source env_foss4g/bin/activate
     cd foss4g
     pip install -r requirements.txt
+
+Create a new secret key:
+
+    python -c'from django.utils.crypto import get_random_string;print(get_random_string(50, "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"))'
+
+Add this key to `/opt/proposals/foss4g/foss4g/settings.py` as the value of `SECRET_KEY`.
+
+Populate the application:
+
     ./manage.py migrate
     ./manage.py loaddata sites conference proposal_base sitetree sponsor_benefits sponsor_levels
     ./manage.py collectstatic
