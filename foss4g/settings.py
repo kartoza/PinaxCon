@@ -17,8 +17,7 @@ DATABASES = {
 }
 
 ALLOWED_HOSTS = [
-    os.environ.get("GONDOR_INSTANCE_DOMAIN"),
-    "conference.pinaxproject.com"
+    "proposals.foss4g.2016.org"
 ]
 
 # Local time zone for this installation. Choices can be found here:
@@ -194,6 +193,7 @@ LOGGING = {
 FIXTURE_DIRS = [
     os.path.join(PROJECT_ROOT, "fixtures"),
 ]
+
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
