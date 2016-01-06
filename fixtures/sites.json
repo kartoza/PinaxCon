@@ -3,8 +3,8 @@
         "pk": 1,
         "model": "sites.site",
         "fields": {
-            "domain": "localhost:8000",
-            "name": "FOSS4G"
+            "domain": "proposals.2016.foss4g.org",
+            "name": "FOSS4G 2016"
         }
     }
 ]
