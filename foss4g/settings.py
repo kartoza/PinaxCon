@@ -17,6 +17,7 @@ DATABASES = {
 }
 
 ALLOWED_HOSTS = [
+    "localhost",
     "proposals.foss4g.2016.org"
 ]
 
