@@ -18,7 +18,7 @@ DATABASES = {
 
 ALLOWED_HOSTS = [
     "localhost",
-    "proposals.foss4g.2016.org"
+    "proposals.2016.foss4g.org"
 ]
 
 # Local time zone for this installation. Choices can be found here:
