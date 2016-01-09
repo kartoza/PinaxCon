@@ -21,11 +21,11 @@ The server needs at least git, python-dev and python-virtualenv installed (proba
 Create directories and install dependencies:
 
     cd /opt/proposals
-    git clone https://github.com/vmx/PinaxCon.git foss4g
+    git clone --recursive https://github.com/vmx/PinaxCon.git foss4g
     virtualenv env_foss4g
     source env_foss4g/bin/activate
     cd foss4g
-    pip install -r requirements.txt
+    pip install -r requirements.txt -r symposion/requirements/base.txt
 
 Create a new secret key:
 

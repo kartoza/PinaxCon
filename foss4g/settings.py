@@ -1,4 +1,5 @@
 import os
+import sys
 import dj_database_url
 
 
@@ -7,6 +8,9 @@ PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 BASE_DIR = PACKAGE_ROOT
 
 DEBUG = bool(int(os.environ.get("DEBUG", "0")))
+
+# Add Symposion into the search path
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'symposion'))
 
 DATABASES = {
     #"default": dj_database_url.config(default="postgres://localhost/pinaxcon")

@@ -1,0 +1,4 @@
+[submodule "symposion"]
+	path = symposion
+	url = https://github.com/vmx/symposion.git
+	branch = foss4g
