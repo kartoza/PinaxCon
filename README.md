@@ -118,3 +118,13 @@ Now activate the virtual host:
 And reload the configuration:
 
     sudo service apache2 reload
+
+
+Updating generated files
+------------------------
+
+Currently the generated files are also committed to ease the deployment, but in case you
+need to recreate them run:
+
+    npm install
+    ./node_modules/webpack/bin/webpack.js --config=static/webpack.config.js
