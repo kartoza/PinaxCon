@@ -1,12 +1,12 @@
 [
 {
     "fields": {
-        "last_updated": "2015-12-16T11:23:50.154Z",
+        "last_updated": "2016-01-10T20:57:01.106Z",
         "created_by": 1,
         "label": "sponsor-top",
-        "content": "We like to thanks our sponsors for their support. <a href=\"http://2016.foss4g.org/index.php/sponsoring.html#sponsor-packages\">Become a sponsor</a>.",
-        "last_updated_by": 1,
-        "content_html": "<p>We like to thanks our sponsors for their support. <a href=\"http://2016.foss4g.org/index.php/sponsoring.html#sponsor-packages\">Become a sponsor</a>.</p>"
+        "content": "We would like to thank our sponsors for their support. <a href=\"http://2016.foss4g.org/index.php/sponsoring.html#sponsor-packages\">Become a sponsor</a>.",
+        "last_updated_by": 5,
+        "content_html": "<p>We would like to thank our sponsors for their support. <a href=\"http://2016.foss4g.org/index.php/sponsoring.html#sponsor-packages\">Become a sponsor</a>.</p>"
     },
     "model": "boxes.box",
     "pk": 1
