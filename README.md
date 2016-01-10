@@ -62,7 +62,7 @@ DJANGO_APP = '/opt/proposals/foss4g'
 
 site.addsitedir(os.path.join(VIRTUALENV, 'lib/python2.7/site-packages'))
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'foss4g.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'foss4g.settings_prod'
 
 if DJANGO_APP not in sys.path:
     sys.path.append(DJANGO_APP)
