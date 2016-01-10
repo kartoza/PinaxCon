@@ -32,7 +32,7 @@ Create a new secret key:
 
     python -c'from django.utils.crypto import get_random_string;print(get_random_string(50, "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"))'
 
-Add this key to `/opt/proposals/foss4g/foss4g/settings.py` as the value of `SECRET_KEY`.
+Add this key to `/opt/proposals/foss4g/foss4g/settings_prod.py` as the value of `SECRET_KEY`.
 
 Populate the application:
 
