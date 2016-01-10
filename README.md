@@ -36,6 +36,7 @@ Add this key to `/opt/proposals/foss4g/foss4g/settings.py` as the value of `SECR
 
 Populate the application:
 
+    ./manage.py makemigrations
     ./manage.py migrate
     ./manage.py loaddata sites conference proposal_base sitetree sponsor_benefits sponsor_levels
     ./manage.py collectstatic
