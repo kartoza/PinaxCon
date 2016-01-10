@@ -81,7 +81,8 @@ application = Cling(MediaCling(get_wsgi_application()))
 
 ### Setting permissions
 
-    sudo chown www-data:$USER -R /opt/proposals
+    chmod g+w /opt/proposals/foss4g /opt/proposals/foss4g/foss4g.sqlite
+    sudo chown $USER:www-data -R /opt/proposals
 
 
 Setting up Apache
