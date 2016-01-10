@@ -38,13 +38,10 @@ Populate the application:
 
     ./manage.py makemigrations
     ./manage.py migrate
-    ./manage.py loaddata sites conference proposal_base sitetree sponsor_benefits sponsor_levels
+    ./manage.py createsuperuser
+    ./manage.py loaddata sites conference proposal_base sitetree sponsor_benefits sponsor_levels boxes
     ./manage.py collectstatic
     deactivate
-
-In case you want a superuser, run
-
-    ./manage.py createsuperuser
 
 before you deactivate the virtualenv.
 
