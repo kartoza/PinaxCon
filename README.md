@@ -52,7 +52,6 @@ Some paths and the virtualenv need to be setup correctly in order to run the Dja
 
 ```
 #!/usr/bin/python
-from __future__ import print_function
 import os
 import sys
 import site
