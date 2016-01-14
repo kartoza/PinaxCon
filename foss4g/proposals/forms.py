@@ -45,6 +45,8 @@ class TalkProposalForm(ProposalForm):
                 .format(FOOTNOTE)),
         }
         widgets = {
+          'abstract': forms.Textarea(attrs={'rows': 13}),
+          'additional_notes': forms.Textarea(attrs={'rows': 7}),
           'foss_is_links': forms.Textarea(attrs={'rows': 3}),
           'foss_contributing_links': forms.Textarea(attrs={'rows': 5}),
           'foss_using_links': forms.Textarea(attrs={'rows': 5}),
