@@ -94,7 +94,7 @@
         "access_perm_type": 1,
         "alias": null,
         "sort_order": 1,
-        "inmenu": true,
+        "inmenu": false,
         "access_loggedin": false,
         "hidden": false,
         "urlaspattern": true,
