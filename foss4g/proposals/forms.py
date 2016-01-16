@@ -24,7 +24,6 @@ class TalkProposalForm(ProposalForm):
         fields = [
             "title",
             "abstract",
-            "additional_notes",
             "recording_release",
             "foss_is",
             "foss_is_links",
@@ -32,6 +31,7 @@ class TalkProposalForm(ProposalForm):
             "foss_contributing_links",
             "foss_using",
             "foss_using_links",
+            "additional_notes",
         ]
         labels = {
             'foss_is': mark_safe(
