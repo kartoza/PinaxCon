@@ -127,3 +127,15 @@ need to recreate them run:
 
     npm install
     ./node_modules/webpack/bin/webpack.js --config=static/webpack.config.js
+
+
+Updating to newer checkout
+--------------------------
+
+    cd /opt/proposals/foss4g
+    git pull
+    git submodule update --remote
+    . /opt/proposals/env_foss4g/bin/activate
+    ./manage.py makemigrations
+    ./manage.py migrate
+    touch /opt/proposals/html/index.wsgi
