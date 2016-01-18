@@ -218,6 +218,10 @@ CONFERENCE_ID = 2
 PROPOSAL_FORMS = {
     "talk": "foss4g.proposals.forms.TalkProposalForm",
     "workshop": "foss4g.proposals.forms.WorkshopProposalForm",
+    "map": "foss4g.proposals.forms.MapProposalForm",
 }
 PINAX_PAGES_HOOKSET = "foss4g.hooks.PinaxPagesHookSet"
 PINAX_BOXES_HOOKSET = "foss4g.hooks.PinaxBoxesHookSet"
+
+# 5.5MB as the maximum upload is 5MB
+FILE_UPLOAD_MAX_MEMORY_SIZE = 5767168

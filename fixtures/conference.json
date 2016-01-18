@@ -30,5 +30,16 @@
     },
     "model": "symposion_conference.section",
     "pk": 3
+},
+{
+    "fields": {
+        "conference": 2,
+        "start_date": "2016-08-24",
+        "name": "Maps",
+        "end_date": "2016-08-26",
+        "slug": "maps"
+    },
+    "model": "symposion_conference.section",
+    "pk": 4
 }
 ]

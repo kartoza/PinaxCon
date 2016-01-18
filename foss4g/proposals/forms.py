@@ -1,7 +1,7 @@
 from django import forms
 from django.utils.safestring import mark_safe
 
-from .models import TalkProposal, WorkshopProposal
+from .models import MapProposal, TalkProposal, WorkshopProposal
 
 
 class ProposalForm(forms.ModelForm):
@@ -62,3 +62,32 @@ class WorkshopProposalForm(ProposalForm):
             "abstract",
             "additional_notes",
         ]
+
+
+class MapProposalForm(ProposalForm):
+
+    def clean_map_image(self):
+        image = self.cleaned_data['map_image']
+        megabyte_limit = 5
+        if image.size > megabyte_limit * 1024 * 1024:
+            raise forms.ValidationError(
+                "The submitted file was bigger than {}MB.".format(megabyte_limit))
+        return image
+
+    class Meta:
+        model = MapProposal
+        fields = [
+            "title",
+            "abstract",
+            "map_image",
+            "map_link",
+            "foss_using",
+            "open_data_using",
+            "additional_notes",
+        ]
+        widgets = {
+          'abstract': forms.Textarea(attrs={'rows': 13}),
+          'foss_using': forms.Textarea(attrs={'rows': 4}),
+          'open_data_using': forms.Textarea(attrs={'rows': 4}),
+          'additional_notes': forms.Textarea(attrs={'rows': 7}),
+        }
