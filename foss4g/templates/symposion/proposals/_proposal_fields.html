@@ -4,11 +4,7 @@
     <dt>{% trans "Submitted by" %}</dt>
     <dd>{{ proposal.speaker }}</dd>
 
-    <dt>{% trans "Track" %}</dt>
-    <dd>{{ proposal.track }}&nbsp;</dd>
 
-    <dt>{% trans "Audience Level" %}</dt>
-    <dd>{{ proposal.get_audience_level_display }}&nbsp;</dd>
 
     {% if proposal.additional_speakers.all %}
         <dt>{% trans "Additional Speakers" %}</dt>
@@ -25,11 +21,41 @@
         </dd>
     {% endif %}
 
-    <dt>{% trans "Description" %}</dt>
-    <dd>{{ proposal.description }}&nbsp;</dd>
-
     <dt>{% trans "Abstract" %}</dt>
-    <dd>{{ proposal.abstract|safe }}&nbsp;</dd>
+    <dd>{{ proposal.abstract|safe }}</dd>
+
+    {% if proposal.foss_is_links %}
+        <dt>Project</dt>
+        <dd>{{ proposal.foss_is_links }}</dd>
+    {% endif %}
+
+
+    {% if proposal.foss_contributing_links %}
+        <dt>Contributions</dt>
+        <dd>{{ proposal.foss_contributing_links }}</dd>
+    {% endif %}
+
+    {% if proposal.foss_using_links %}
+        <dt>Uses</dt>
+        <dd>{{ proposal.foss_using_links }}</dd>
+    {% endif %}
+
+
+
+    {% if proposal.map_image %}
+        <dt>Map</dt>
+        <dd><a href="{{ proposal.map_image.url }}">{{ proposal.map_image.name }}</a></dd>
+
+        <dt>Link to map</dt>
+        <dd><a href="{{ proposal.map_link }}" targe="_blank">{{ proposal.map_link }}</a></dd>
+
+
+        <dt>FOSS software used</dt>
+        <dd>{{ proposal.foss_used }}</dd>
+
+        <dt>Open data used</dt>
+        <dd>{{ proposal.open_data_used }}</dd>
+    {% endif %}
 
     <dt>{% trans "Notes" %}</dt>
     <dd>{{ proposal.additional_notes|safe }}&nbsp;</dd>
