@@ -1,7 +1,36 @@
+import re
+
+from django.core.exceptions import ValidationError
 from django.db import models
+from django.utils.deconstruct import deconstructible
 from django.utils.safestring import mark_safe
 
 from symposion.proposals.models import ProposalBase
+
+
+@deconstructible
+class MaxMarkdownWordValidator(object):
+    charachter_re = re.compile('[a-zA-Z0-9]')
+
+    def __init__(self, maximum):
+        self.maximum = maximum
+        self.message = 'The text has more than maximum of {} words.'.format(
+            maximum)
+
+    def __call__(self, value):
+        words = value.split()
+        words = [word for word in words
+                 if self.charachter_re.search(word) is not None]
+        if len(words) > self.maximum:
+            raise ValidationError(self.message)
+        else:
+            return True
+
+    def __eq__(self, other):
+        return (
+            isinstance(other, MaxWordValidator) and
+            (self.maximum == other.maximum)
+        )
 
 
 class Proposal(ProposalBase):
@@ -10,12 +39,12 @@ class Proposal(ProposalBase):
         abstract = True
 
 Proposal._meta.get_field('abstract').verbose_name = 'Abstract'
-# TODO vmx 2015-12-13: Add maximum number of words
 Proposal._meta.get_field('abstract').help_text = (
     "Will be made public if your proposal is accepted. "
-    "Please keep it below 250 words. Edit using "
+    "Please aim for 125-175 words, 250 words is the maximum. Edit using "
     "<a href='http://daringfireball.net/projects/markdown/basics' "
     "target='_blank'>Markdown</a>.")
+Proposal._meta.get_field('abstract').validators = [MaxMarkdownWordValidator(250)]
 
 
 class TalkProposal(Proposal):
