@@ -5,6 +5,7 @@ from .models import MapProposal, TalkProposal, WorkshopProposal
 
 
 class ProposalForm(forms.ModelForm):
+    required_css_class = 'required'
 
     def clean_description(self):
         value = self.cleaned_data["description"]

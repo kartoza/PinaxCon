@@ -8956,3 +8956,6 @@ p.login-signup {
 .navbar-brand {
   padding-top: 0px;
 }
+label.required:after {
+  content: "*";
+}
