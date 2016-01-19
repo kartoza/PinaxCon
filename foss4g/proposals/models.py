@@ -72,6 +72,7 @@ class MapProposal(Proposal):
         verbose_name="Map",
         help_text=("Please upload an image of the map. "
                    "It will be made public on the website. "
+                   "If it's an interactive map, please create a screenshot. "
                    "The size is limited to 5MB."))
 
     map_link = models.URLField(
