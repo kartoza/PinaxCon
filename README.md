@@ -138,4 +138,5 @@ Updating to newer checkout
     . /opt/proposals/env_foss4g/bin/activate
     ./manage.py makemigrations
     ./manage.py migrate
+    ./manage.py collectstatic
     touch /opt/proposals/html/index.wsgi
