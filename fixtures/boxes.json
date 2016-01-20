@@ -5,7 +5,7 @@
         "created_by": 1,
         "label": "sponsor-top",
         "content": "We would like to thank our sponsors for their support. <a href=\"http://2016.foss4g.org/index.php/sponsoring.html#sponsor-packages\">Become a sponsor</a>.",
-        "last_updated_by": 5,
+        "last_updated_by": 1,
         "content_html": "<p>We would like to thank our sponsors for their support. <a href=\"http://2016.foss4g.org/index.php/sponsoring.html#sponsor-packages\">Become a sponsor</a>.</p>"
     },
     "model": "boxes.box",
