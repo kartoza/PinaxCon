@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.deconstruct import deconstructible
 from django.utils.safestring import mark_safe
+from taggit.managers import TaggableManager
 
 from symposion.proposals.models import ProposalBase
 
@@ -34,6 +35,7 @@ class MaxMarkdownWordValidator(object):
 
 
 class Proposal(ProposalBase):
+    tags = TaggableManager(blank=True)
 
     class Meta:
         abstract = True

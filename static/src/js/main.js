@@ -6,6 +6,8 @@ require("../less/site.less");
 
 require("../images/foss4g-logo-150px-small.png");
 
+require("./selectize.js");
+
 
 $(document).ready(function() {
     // Display a small box that counts the number of words
@@ -29,4 +31,40 @@ $(document).ready(function() {
         // Populate the field with the current number of words
         textfield.trigger('propertychange');
     }
+
+    $('#id_tags').removeClass().selectize({
+        valueField: 'name',
+        labelField: 'name',
+        searchField: 'name',
+        create: true,
+        render: {
+            option: function(item, escape) {
+                return '<div>' +
+                    '<span class="title">' +
+                        '<span class="name">' + escape(item.name) + '</span>' +
+                    '</span>' +
+                '</div>';
+            }
+        },
+        score: function(search) {
+            var score = this.getScoreFunction(search);
+            return function(item) {
+                return score(item);
+            };
+        },
+        load: function(query, callback) {
+            if (query.length < 2) return callback();
+            $.ajax({
+                url: '/taggit/?query=' + encodeURIComponent(query),
+                type: 'GET',
+                error: function() {
+                    callback();
+                },
+                success: function(res) {
+                    callback(res.tags.slice(0, 10));
+                }
+            });
+        }
+    });
 });
+

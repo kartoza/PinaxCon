@@ -24,6 +24,10 @@
     <dt>{% trans "Abstract" %}</dt>
     <dd>{{ proposal.abstract|safe }}</dd>
 
+    <dt>Tags</dt>
+    <dd>{{ proposal.tags.all|join:", " }}
+    </dd>
+
     {% if proposal.foss_is_links %}
         <dt>Project</dt>
         <dd>{{ proposal.foss_is_links }}</dd>

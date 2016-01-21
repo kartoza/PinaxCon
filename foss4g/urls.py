@@ -27,6 +27,7 @@ urlpatterns = patterns(
     url(r"^teams/", include("symposion.teams.urls")),
 
     url(r"^boxes/", include("pinax.boxes.urls")),
+    url(r'^taggit/', include('taggit_selectize.urls')),
     url(r"^", include("pinax.pages.urls")),
 )
 

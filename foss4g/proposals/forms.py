@@ -25,6 +25,7 @@ class TalkProposalForm(ProposalForm):
         fields = [
             "title",
             "abstract",
+            "tags",
             "recording_release",
             "foss_is",
             "foss_is_links",
@@ -61,6 +62,7 @@ class WorkshopProposalForm(ProposalForm):
         fields = [
             "title",
             "abstract",
+            "tags",
             "additional_notes",
         ]
 
@@ -80,6 +82,7 @@ class MapProposalForm(ProposalForm):
         fields = [
             "title",
             "abstract",
+            "tags",
             "map_image",
             "map_link",
             "foss_using",

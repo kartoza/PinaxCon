@@ -225,3 +225,5 @@ PINAX_BOXES_HOOKSET = "foss4g.hooks.PinaxBoxesHookSet"
 
 # 5.5MB as the maximum upload is 5MB
 FILE_UPLOAD_MAX_MEMORY_SIZE = 5767168
+
+TAGGIT_CASE_INSENSITIVE = True
