@@ -133,7 +133,7 @@
                 <ul>
                     {% for section in review_sections %}
                         <h5>{{ section }}</h5>
-                        <li><a href="{% url "review_section" section.section.slug %}">All</a></li>
+                        <li><a href="{% url "review_section" section.section.slug %}">All {{section.section.slug}}</a></li>
                         <li><a href="{% url "user_reviewed" section.section.slug %}">Reviewed by you</a></li>
                         <li><a href="{% url "user_not_reviewed" section.section.slug %}">Not Reviewed by you</a></li>
                     {% endfor %}
