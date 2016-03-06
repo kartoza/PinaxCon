@@ -25,17 +25,13 @@ def proposal_export(request):
         'title',
         'description',
         'keywords',
-        'links'
     ])
 
     proposals = TalkProposal.objects.all().order_by('id')
     for proposal in proposals:
-
+        description = proposal.abstract
         if proposal.foss_is_links:
-            description = "{}\n\nLinks: {}".format(
-                proposal.abstract, proposal.foss_is_links)
-        else:
-            description = proposal.abstract
+            description += "\n\nLinks: " + proposal.foss_is_links
 
         writer.writerow([
             proposal.id,
