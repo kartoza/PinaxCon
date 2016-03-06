@@ -6,6 +6,7 @@ from django.views.generic.base import RedirectView
 
 from django.contrib import admin
 
+import foss4g.views
 import symposion.views
 
 
@@ -20,6 +21,8 @@ urlpatterns = patterns(
 
     url(r"^speaker/", include("symposion.speakers.urls")),
     url(r"^proposals/", include("symposion.proposals.urls")),
+    url(r'^proposals/export/', foss4g.views.proposal_export,
+        name='proposal_export'),
     url(r"^sponsors/", include("symposion.sponsorship.urls")),
     url(r"^reviews/", include("symposion.reviews.urls")),
     url(r"^schedule/", include("symposion.schedule.urls")),

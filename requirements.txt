@@ -9,6 +9,8 @@ psycopg2==2.6.1
 pinax-pages==0.3.1
 pinax-boxes==2.1.0
 taggit-selectize==0.1.2
+unicodecsv==0.14.1
+mdx_linkify==0.6
 
 # Those two packages are already installed by symposion/requirements.txt
 #Django==1.8.5
