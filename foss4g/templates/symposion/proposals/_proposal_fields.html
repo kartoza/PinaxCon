@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load markdownify %}
 
 <dl class="dl-horizontal">
     <dt>{% trans "Submitted by" %}</dt>
@@ -22,7 +23,7 @@
     {% endif %}
 
     <dt>{% trans "Abstract" %}</dt>
-    <dd>{{ proposal.abstract|safe }}</dd>
+    <dd>{{ proposal.abstract|markdownify|safe }}</dd>
 
     <dt>Tags</dt>
     <dd>{{ proposal.tags.all|join:", " }}
