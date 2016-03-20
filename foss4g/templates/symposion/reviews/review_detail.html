@@ -3,6 +3,7 @@
 {% load i18n %}
 {% load bootstrap %}
 {% load account_tags %}
+{% load markdownify %}
 
 
 {% block body %}
@@ -61,7 +62,7 @@
 
 
     <h3>{% trans "Abstract" %}</h3>
-    <p>{{ proposal.abstract|safe }}</p>
+    <p>{{ proposal.abstract|markdownify|safe }}</p>
 
     {% if proposal.tags.all %}
     <p><strong>Tags:</strong> {{ proposal.tags.all|join:", " }}</p>
@@ -71,17 +72,17 @@
     <dl>
     {% if proposal.foss_is_links %}
         <dt>…is open source:</dt>
-        <dd>{{ proposal.foss_is_links }}</dd>
+        <dd>{{ proposal.foss_is_links|markdownify|safe }}</dd>
     {% endif %}
 
     {% if proposal.foss_contributing_links %}
         <dt>…contributes to open source:</dt>
-        <dd>{{ proposal.foss_contributing_links }}</dd>
+        <dd>{{ proposal.foss_contributing_links|markdownify|safe }}</dd>
     {% endif %}
 
     {% if proposal.foss_using_links %}
         <dt>…uses open source:</dt>
-        <dd>{{ proposal.foss_using_links }}</dd>
+        <dd>{{ proposal.foss_using_links|markdownify|safe }}</dd>
     {% endif %}
     </dl>
     {% if not proposal.foss_is_links and not proposal.foss_contributing_links and not proposal.foss_is_links %}
@@ -90,7 +91,7 @@
 
     {% if proposal.additional_notes %}
     <h3>Notes from submitter</h3>
-    <p>{{ proposal.additional_notes|safe }}</p>
+    <p>{{ proposal.additional_notes|markdownify|safe }}</p>
     {% endif %}
 
 
