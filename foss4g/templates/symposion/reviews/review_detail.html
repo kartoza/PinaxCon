@@ -63,7 +63,9 @@
     <h3>{% trans "Abstract" %}</h3>
     <p>{{ proposal.abstract|safe }}</p>
 
+    {% if proposal.tags.all %}
     <p><strong>Tags:</strong> {{ proposal.tags.all|join:", " }}</p>
+    {% endif %}
 
     <h3>This project/case study…</h3>
     <dl>
