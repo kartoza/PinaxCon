@@ -140,3 +140,13 @@ Updating to newer checkout
     ./manage.py migrate
     ./manage.py collectstatic
     touch /opt/proposals/html/index.wsgi
+
+
+Adding reviewers
+----------------
+
+First create the permissions that are needed:
+
+     ./manage.py create_review_permissions
+
+Now add a new team (through /admin/teams/team/add/) which has the permissions for `can_review_{section_slug}`. Then add the users to the team via /admin/teams/membership/add/ .
