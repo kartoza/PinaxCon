@@ -56,8 +56,9 @@
             {% block sidebar %}
                 <ul class="nav nav-list well">
                     {% for review_section in review_sections %}
-                        {# The sidebar is shown in the proposals overview as
-                           well as when a single proposal is shown for revew #}
+                        <!-- The sidebar is shown in the proposals overview as
+                             well as when a single proposal is shown for
+                             review -->
                         {% if review_section.section == section.section or review_section.section == proposal.section %}
                             <li class="nav-header">
                                 {{ review_section }}
