@@ -82,6 +82,9 @@
         <dd>{{ proposal.foss_using_links }}</dd>
     {% endif %}
     </dl>
+    {% if not proposal.foss_is_links and not proposal.foss_contributing_links and not proposal.foss_is_links %}
+    didn't give any links in regards to its open sourcyness
+    {% endif %}
 
     {% if proposal.additional_notes %}
     <h3>Notes from submitter</h3>
