@@ -27,7 +27,7 @@ def proposal_export(request):
         'keywords',
     ])
 
-    proposals = TalkProposal.objects.all().order_by('id')
+    proposals = TalkProposal.objects.all().filter(cancelled=0).order_by('id')
     for proposal in proposals:
         description = proposal.abstract
         if proposal.foss_is_links:
