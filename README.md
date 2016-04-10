@@ -39,7 +39,7 @@ Populate the application:
     ./manage.py makemigrations
     ./manage.py migrate
     ./manage.py createsuperuser
-    ./manage.py loaddata sites conference proposal_base sitetree sponsor_benefits sponsor_levels boxes
+    ./manage.py loaddata sites conference proposal_base sitetree sponsor_benefits sponsor_levels boxes notificationtemplate
     ./manage.py collectstatic
     deactivate
 
