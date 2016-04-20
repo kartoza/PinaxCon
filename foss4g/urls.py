@@ -25,6 +25,8 @@ urlpatterns = patterns(
         name='proposal_export'),
     url(r"^sponsors/", include("symposion.sponsorship.urls")),
     url(r"^reviews/", include("symposion.reviews.urls")),
+    url(r'^reviews/export/', foss4g.views.review_export,
+        name='review_export'),
     url(r"^schedule/", include("symposion.schedule.urls")),
 
     url(r"^teams/", include("symposion.teams.urls")),
