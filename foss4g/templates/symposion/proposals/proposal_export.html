@@ -8,13 +8,13 @@
   <h2 id="{{ proposal.number }}">#{{ proposal.number }}: {{ proposal.title }}</h2>
 
   <p>
-  {% if proposal.speakers|listify|length == 1 %}
+  {% if proposal.speakers|listify_if_true:"name"|length == 1 %}
     <strong>Speaker</strong>:
   {% else %}
     <strong>Speakers</strong>:
   {% endif %}
 
-  {% for speaker in proposal.speakers %}
+  {% for speaker in proposal.speakers|listify_if_true:"name" %}
     <strong>{{ speaker.name }}</strong>{% if speaker.company %} ({{ speaker.company }}){% endif %}{% if not forloop.last %},{% endif %}
   {% endfor %}
   </p>

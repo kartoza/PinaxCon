@@ -6,3 +6,6 @@ register = template.Library()
 def listify(generator):
     return list(generator)
 
+@register.filter
+def listify_if_true(generator, attr):
+    return [item for item in generator if getattr(item, 'name')]
